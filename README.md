@@ -30,13 +30,13 @@ See the following publication for details:
 
 - OVITO Pro [integrated Python interpreter](https://docs.ovito.org/python/introduction/installation.html#ovito-pro-integrated-interpreter):
   ```
-  ovitos -m pip install --user git+https://github.com/ovito-org/CommonNeighborhoodParameter.git
+  ovitos -m pip install --user git+https://github.com/lafourcadep/S2TXA.git
   ``` 
   The `--user` option is recommended and [installs the package in the user's site directory](https://pip.pypa.io/en/stable/user_guide/#user-installs).
 
 - Other Python interpreters or Conda environments:
   ```
-  pip install git+https://github.com/ovito-org/CommonNeighborhoodParameter.git
+  pip install git+https://github.com/lafourcadep/S2TXA.git
   ```
 
 ## Technical information / dependencies
