@@ -4,9 +4,9 @@ Analyze the Deformation Gradient Tensor and extract associated slip direction an
 
 ## Description
 
-The S2TXA algorithm performs basic and computational cheap operations on the deformation gradient tensor to extract :
+The S2TXA algorithm performs basic and computationally cheap operations on the deformation gradient tensor to extract :
   - normalized slip direction
-  - normalizde slip plane
+  - normalized slip plane
 
 See the following publication for details:
 
@@ -14,7 +14,11 @@ See the following publication for details:
   > *Extraction of slip systems and twinning variants from a Lagrangian analysis of molecular dynamics simulations*
   > Mechanis of Materials (2025), Volume 200, Special Issue STAMS 2023 / SEMTA-MECAMAT COLLOQUIUM - Mechanics Across the Scales, Pages 105189
   > [https://doi.org/10.1016/j.mechmat.2024.105189](https://doi.org/10.1016/j.mechmat.2024.105189)
-  
+
+Further process of the per-atom slip direction and slip plane car help understand what slip systems are activated in the system. Prior to apply the S2TXA modifier, one should:
+  - Apply the AtomicStrain modifier with an appropriate cutoff radius
+  - Activate the computation of the deformation gradient tensor
+    
 ## Parameters 
 
 | GUI name                        | Python name       | Description                                                      | Default Value |
