@@ -24,7 +24,7 @@ See the following publication for details:
 
 ## Example
 
-![Example Screenshot](examples/dislocation_loop_Al.png)
+![Example Screenshot](examples/screenshot_gui.png)
 
 ## Installation
 
