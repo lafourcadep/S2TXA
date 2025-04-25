@@ -22,10 +22,14 @@ See the following publication for details:
 | **Shear strain threshold**               | `alpha`          | Per-atom shear strain threshold value below which the S2TXA algorithm is not performed   | `0.1`         |
 
 
-## Example
+## GUI Screenshot
 
 ![Example Screenshot](examples/screenshot_gui.png)
 
+## Pole projection using ovitos script in examples/no_gui_S2TXA_modofier.py
+
+![Example Screenshot](examples/pole_figure.png)
+  
 ## Installation
 
 - OVITO Pro [integrated Python interpreter](https://docs.ovito.org/python/introduction/installation.html#ovito-pro-integrated-interpreter):
