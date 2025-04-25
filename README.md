@@ -26,7 +26,7 @@ See the following publication for details:
 
 ![Example Screenshot](examples/screenshot_gui.png)
 
-## Pole projection using ovitos script in examples/no_gui_S2TXA_modofier.py
+## Pole projection using ovitos script in examples/no_gui_S2TXA_modifier.py
 
 ![Example Screenshot](examples/pole_figure.png)
   
