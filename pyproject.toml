@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools", "wheel", "matplotlib"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -18,7 +18,10 @@ dependencies = [
 
 [project.urls]
 repository = "https://github.com/lafourcadep/S2TXA"
-  
+
+[project.entry-points.'OVITO.ViewportOverlay']
+"Pole Figure" = "S2TXA:S2TXAPoleFigureOverlay"
+    
 [project.entry-points.'OVITO.Modifier']
 "S2TXA" = "S2TXA:S2TXA"
 
