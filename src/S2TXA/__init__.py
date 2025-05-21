@@ -77,9 +77,13 @@ class S2TXAPoleFigureOverlay(ViewportOverlayInterface):
 
     def render(self, canvas: ViewportOverlayInterface.Canvas, data: DataCollection, frame: int, **kwargs):
 
-        slip_planes = data.particles['Slip plane'][...]
-        slip_dirs = data.particles['Slip direction'][...]
-
+        try:
+            slip_planes = data.particles['Slip plane'][...]
+            slip_dirs = data.particles['Slip direction'][...]
+        except:
+            print("No slip plane nor slip direction found, please apply the S2TXA modifier before adding the S2TXA Pole Projection layer")
+            exit(0)
+            
         with canvas.mpl_figure(pos=(self.alignment_[0] + self.px, self.alignment_[1] + self.py), size=(self.w, self.h), font_scale = self.font_size, anchor=self.alignment_[2], alpha=self.alpha, tight_layout=True) as fig:
             ax = fig.subplots(1,1)
             
