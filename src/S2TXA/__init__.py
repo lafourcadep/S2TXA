@@ -86,7 +86,7 @@ class S2TXAPoleFigureOverlay(ViewportOverlayInterface):
             if self.title != "":
                 ax.set_title(self.title)
             else:
-                ax.set_title('Pole Projection (Stereographic)')
+                ax.set_title('S2TXA Pole Projection (Stereographic)')
             S2TXAPoleFigureOverlay.setup_pole_figure(fig, ax, slip_planes)
 
             # Normalize vectors to lie on unit sphere

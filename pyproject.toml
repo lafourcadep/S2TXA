@@ -20,7 +20,7 @@ dependencies = [
 repository = "https://github.com/lafourcadep/S2TXA"
 
 [project.entry-points.'OVITO.ViewportOverlay']
-"Pole Figure" = "S2TXA:S2TXAPoleFigureOverlay"
+"S2TXA Pole Projection" = "S2TXA:S2TXAPoleFigureOverlay"
     
 [project.entry-points.'OVITO.Modifier']
 "S2TXA" = "S2TXA:S2TXA"
