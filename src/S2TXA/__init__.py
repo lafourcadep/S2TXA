@@ -80,7 +80,7 @@ class S2TXAPoleFigureOverlay(ViewportOverlayInterface):
         if 'Slip plane' not in data.particles or 'Slip direction' not in data.particles:
             raise RuntimeError(
                 "Missing required particle properties: 'Slip plane' and 'Slip direction'.\n"
-                "Please make sure to insert the 'S2TXA Modifier' earlier in the pipeline."
+                "Please make sure to insert the S2TXA Python Modifier earlier in the pipeline."
             )
         
         slip_planes = data.particles['Slip plane'][...]
@@ -131,6 +131,12 @@ class S2TXA(ModifierInterface):
         
         if self.alpha <= 0.0:
             raise ValueError("Shear strain threshold must be positive.")
+
+        if 'ShearStrain' not in data.particles:
+            raise RuntimeError(
+                "Missing required particle properties: 'ShearStrain'.\n"
+                "Please make sure to insert the AtomicStrain Python Modifier earlier in the pipeline."
+            )
         
         sheared = data.apply(ExpressionSelectionModifier(expression='ShearStrain>%5.8f' %self.alpha))
         
