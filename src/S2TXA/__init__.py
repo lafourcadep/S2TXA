@@ -132,10 +132,16 @@ class S2TXA(ModifierInterface):
         if self.alpha <= 0.0:
             raise ValueError("Shear strain threshold must be positive.")
 
-        if 'ShearStrain' not in data.particles:
+        if 'Shear Strain' not in data.particles:
             raise RuntimeError(
-                "Missing required particle properties: 'ShearStrain'.\n"
+                "Missing required particle properties: 'Shear Strain'.\n"
                 "Please make sure to insert the AtomicStrain Python Modifier earlier in the pipeline."
+            )
+
+        if 'Deformation Gradient' not in data.particles:
+            raise RuntimeError(
+                "Missing required particle properties: 'Deformation Gradient'.\n"
+                "Please make sure to tick the \'Output deformation gradient tensors\' option when applying the AtomicStrain Python Modifier as the per-atom deformation gradient tensor is required by S2TXA."
             )
         
         sheared = data.apply(ExpressionSelectionModifier(expression='ShearStrain>%5.8f' %self.alpha))
