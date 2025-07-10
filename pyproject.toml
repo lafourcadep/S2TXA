@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "S2TXA"
-version = "1.0.0"
+version = "1.0.1"
 description = "Extract slip direction and slip plane from the activated deformation mechanism"
 keywords = ["ovito", "ovito-extension"]
 authors = [{name = "Paul Lafourcade", email = "paul.lafourcade@cea.fr"}]

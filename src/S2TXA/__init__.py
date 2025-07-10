@@ -135,7 +135,7 @@ class S2TXA(ModifierInterface):
         if 'Shear Strain' not in data.particles:
             raise RuntimeError(
                 "Missing required particle properties: 'Shear Strain'.\n"
-                "Please make sure to insert the AtomicStrain Python Modifier earlier in the pipeline."
+                "Please make sure to insert the Atomic Strain Modifier earlier in the pipeline."
             )
 
         if 'Deformation Gradient' not in data.particles:
